@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import {Circle, CurrentCircle, getRandomInt, getRandom1} from './utils'
+import {Circle, CurrentCircle} from './particle'
 
 let doc = document.documentElement
 let docWidth = doc.clientWidth
@@ -68,7 +68,7 @@ export default {
       let canvasWidth = canvas.width = docWidth
       let canvasHeight = canvas.height = docHeight
       let ctx = canvas.getContext('2d')
-      let density = 10000
+      let density = 12100
       let particleNum = Math.round(canvasWidth * canvasHeight / density)
 
       for (let i = 0; i < particleNum; i++) {
@@ -89,7 +89,7 @@ export default {
 
       let draw = function () {
         // ctx.clearRect(0, 0, canvasWidth, canvasHeight)
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.25)'
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.25)'
         ctx.fillRect(0,0,canvas.width,canvas.height)
         if (circlesOriginal.length >= particleNum * 1.5) circlesOriginal.splice(particleNum - 1)
         for (let i = 0; i < circlesOriginal.length; i++) {

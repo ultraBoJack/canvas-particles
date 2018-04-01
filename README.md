@@ -1,6 +1,6 @@
-# Particle
+# Vue Particle
 
-> partilces by canvas
+> vue partilces by canvas
 
 >>![demo001](./demo/001.gif)
 

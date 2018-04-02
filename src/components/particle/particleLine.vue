@@ -9,7 +9,7 @@
 <script>
 import {Circle, CurrentCircle} from './particle'
 
-let doc = document.documentElement
+let doc = document.documentElement || document.body
 let docWidth = doc.clientWidth
 let docHeight = doc.clientHeight
 console.log(docWidth, docHeight)
@@ -105,13 +105,12 @@ export default {
             current_circle.drawLine(ctx, circlesOriginal[k])
           }
         }
-        console.log(circlesOriginal.length)
-        // requestAnimationFrame(draw)
+        requestAnimationFrame(draw)
       }
-      // requestAnimationFrame(draw)
-      setInterval(() => {
-        draw()
-      }, 16.7)
+      requestAnimationFrame(draw)
+      // setInterval(() => {
+      //   draw()
+      // }, 16.7)
     },
   }        
 }
